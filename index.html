@@ -519,6 +519,7 @@
       mappings.forEach(({ mainId, subClass }) => {
         const main = document.getElementById(mainId);
         if (main) {
+          // When main is checked/unchecked → check/uncheck all subs
           main.addEventListener('change', () => {
             document.querySelectorAll('.' + subClass).forEach(sub => {
               sub.checked = main.checked;
@@ -526,6 +527,22 @@
               if (row) row.classList.toggle('completed', main.checked);
             });
             updateProgress();
+          });
+
+          // When any sub is checked/unchecked → check if all subs are checked → update main
+          document.querySelectorAll('.' + subClass).forEach(sub => {
+            sub.addEventListener('change', () => {
+              const allSubs = document.querySelectorAll('.' + subClass);
+              const allChecked = Array.from(allSubs).every(s => s.checked);
+              main.checked = allChecked;
+
+              // Also update visual state of main row if needed
+              const mainRow = main.closest('.checklist-item');
+              if (mainRow) {
+                mainRow.classList.toggle('completed', allChecked);
+              }
+              updateProgress();
+            });
           });
         }
       });
