@@ -484,31 +484,45 @@
     }
 
     function updateProgress() {
-      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"], .sub-item input[type="checkbox"]');
-      const total = checkboxes.length;
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       let checked = 0;
+      let total = 0;
 
       checkboxes.forEach(cb => {
-        const item = cb.closest('.checklist-item') || cb.closest('.sub-item');
+        // Ne traiter que les cases de la checklist
+        if (!cb.closest('.checklist-item') && !cb.closest('.sub-item')) return;
+
+        total++;
+
+        const isSub = cb.className.includes('sub-');
+        const target = isSub 
+          ? cb.closest('.sub-item') 
+          : cb.closest('.checklist-item');
+
         if (cb.checked) {
           checked++;
-          if (item) item.classList.add('completed');
+          if (target) target.classList.add('completed');
         } else {
-          if (item) item.classList.remove('completed');
+          if (target) target.classList.remove('completed');
         }
       });
 
-      const percent = Math.round((checked / total) * 100);
+      const percent = total > 0 ? Math.round((checked / total) * 100) : 0;
 
-      document.getElementById('progress-count').textContent = checked;
-      document.getElementById('total-count').textContent = total;
-      document.getElementById('progress-percent').textContent = percent + '%';
-      document.getElementById('progress-bar').style.width = percent + '%';
+      const countEl = document.getElementById('progress-count');
+      const totalEl = document.getElementById('total-count');
+      const percentEl = document.getElementById('progress-percent');
+      const barEl = document.getElementById('progress-bar');
 
-      const bar = document.getElementById('progress-bar');
-      bar.style.background = (percent === 100) 
-        ? 'linear-gradient(to right, #d2d755, #b8c04a)' 
-        : 'linear-gradient(to right, #d2d755, #b8c04a, #9ca53d)';
+      if (countEl) countEl.textContent = checked;
+      if (totalEl) totalEl.textContent = total;
+      if (percentEl) percentEl.textContent = percent + '%';
+      if (barEl) {
+        barEl.style.width = percent + '%';
+        barEl.style.background = (percent === 100) 
+          ? 'linear-gradient(to right, #d2d755, #b8c04a)' 
+          : 'linear-gradient(to right, #d2d755, #b8c04a, #9ca53d)';
+      }
 
       saveChecklistState();
     }
@@ -576,15 +590,4 @@
       updateProgress();
       setupAutoCheck();
 
-      const progressCard = document.querySelector('.stat-card');
-      if (progressCard) {
-        progressCard.addEventListener('dblclick', () => checkAll(true));
-      }
-
-      console.log('%c[Onboarding] Checklist mise à jour avec la dernière version (Telus + Cellulaire détaillé).', 'color:#7d8530');
-    }
-
-    window.onload = init;
-  </script>
-</body>
-</html>
+      const progressCard = doc
