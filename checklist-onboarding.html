@@ -236,7 +236,7 @@
               </div>
               <div class="flex items-center gap-3 sub-item">
                 <input type="checkbox" class="modern-checkbox w-4 h-4 sub-ad-task">
-                <span class="item-text">Changer mot de passe par défaut et envoyé l'info par courriel à Emmie Roy-Rousseau et au supérieur immédiat</span>
+                <span class="item-text">Changer mot de passe par défaut et envoyé par courriel à Emmie Roy-Rousseau</span>
               </div>
               <div class="flex items-center gap-3 sub-item">
                 <input type="checkbox" class="modern-checkbox w-4 h-4 sub-ad-task">
@@ -267,7 +267,7 @@
             </summary>
             <div class="pl-7 mt-2 space-y-1.5 text-sm">
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-connectwise"><span class="item-text">Vérifier contact existe</span></div>
-              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-connectwise"><span class="item-text">Créer le contact (incluant tous les nos de téléphones)</span></div>
+              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-connectwise"><span class="item-text">Créer le contact (incluant tous les nos)</span></div>
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-connectwise"><span class="item-text">Mettre le no par défaut</span></div>
             </div>
           </details>
@@ -322,7 +322,7 @@
             </summary>
             <div class="pl-7 mt-2 space-y-1.5 text-sm">
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-gestionnaire"><span class="item-text">Créer nouvel employé</span></div>
-              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-gestionnaire"><span class="item-text">Envoyez un courriel à paie@soteck.com une fois le profil créé</span></div>
+              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-gestionnaire"><span class="item-text">Envoyez un courriel à paie@soteck.com et à pjtremblay@Soteck.com une fois le profil créé</span></div>
             </div>
           </details>
         </div>
@@ -355,6 +355,10 @@
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-preparation"><span class="item-text">Connecter les applications Office 365 (incluant OneDrive, Teams, etc.)</span></div>
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-preparation"><span class="item-text">Vérifier que l'antivirus SentinelOne s'est installé</span></div>
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-preparation"><span class="item-text">Vérifier si les 5 imprimantes sont installées</span></div>
+              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-preparation"><span class="item-text">Contrevérifier avec le superviseur du département</span></div>
+              <div class="flex items-center gap-3 sub-item" style="padding-left: 3.5rem;"><input type="checkbox" class="modern-checkbox w-4 h-4"><span class="item-text">accès aux bonnes Équipes Teams</span></div>
+              <div class="flex items-center gap-3 sub-item" style="padding-left: 3.5rem;"><input type="checkbox" class="modern-checkbox w-4 h-4"><span class="item-text">accès "mapping" au sharepoint</span></div>
+              <div class="flex items-center gap-3 sub-item" style="padding-left: 3.5rem;"><input type="checkbox" class="modern-checkbox w-4 h-4"><span class="item-text">accès ou menu de Business manager</span></div>
             </div>
           </details>
         </div>
@@ -454,11 +458,43 @@
       </div>
     </div>
 
+    <!-- SECTION: Accueil Employé -->
+    <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
+      <div class="section-header px-6 py-4 flex items-center gap-4">
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">09</div>
+        <h2 class="font-semibold text-xl tracking-tight">Accueil Employé</h2>
+      </div>
+      <div class="p-1.5">
+        <div class="checklist-item flex items-center gap-4 px-5 py-3 rounded-2xl">
+          <input type="checkbox" class="modern-checkbox">
+          <span class="item-text flex-1">Procédure d'accueil</span>
+        </div>
+        <div class="checklist-item flex items-center gap-4 px-5 py-3 rounded-2xl">
+          <input type="checkbox" class="modern-checkbox">
+          <span class="item-text flex-1">Procédure pour employés de chantier / sans ordi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: Bureau Flex ou Fixe ? -->
+    <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
+      <div class="section-header px-6 py-4 flex items-center gap-4">
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">10</div>
+        <h2 class="font-semibold text-xl tracking-tight">Bureau Flex ou Fixe ?</h2>
+      </div>
+      <div class="p-1.5">
+        <div class="checklist-item flex items-center gap-4 px-5 py-3 rounded-2xl">
+          <input type="checkbox" class="modern-checkbox">
+          <span class="item-text flex-1">Si l'employé n'a pas de bureau fixe, faire une demande à soumission pour un écran, un dock et un kit clavier-souris</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <div class="flex flex-col md:flex-row items-center justify-between gap-y-3 text-xs text-slate-400 px-1">
       <div class="flex items-center gap-2">
         <i class="fa-solid fa-info-circle"></i>
-        <span>Coche une tâche principale → les sous-tâches se cochent automatiquement • Bouton « Procédure » = lien Nuclino</span>
+        <span>Chaque case est indépendante • Bouton « Procédure » = lien Nuclino</span>
       </div>
       <div>
         Mis à jour • <span class="font-medium text-slate-500">Juin 2026</span> • Soteck inc.
@@ -590,4 +626,15 @@
       updateProgress();
       setupAutoCheck();
 
-      const progressCard = doc
+      const progressCard = document.querySelector('.stat-card');
+      if (progressCard) {
+        progressCard.addEventListener('dblclick', () => checkAll(true));
+      }
+
+      console.log('%c[Onboarding] Checklist mise à jour avec la dernière version (Telus + Cellulaire détaillé).', 'color:#7d8530');
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>
