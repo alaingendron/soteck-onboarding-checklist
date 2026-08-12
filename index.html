@@ -190,11 +190,6 @@
 
     <!-- Quick Actions -->
     <div class="flex items-center gap-3 mb-6 no-print">
-      <button onclick="checkAll(true)"
-              class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-white hover:bg-[#f8f9d9] border border-slate-200 hover:border-[#d2d755]/40 text-[#5f6525] rounded-2xl transition-all active:scale-[0.985]">
-        <i class="fa-solid fa-check-double text-xs"></i>
-        <span>Tout cocher</span>
-      </button>
       <button onclick="checkAll(false)"
               class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 rounded-2xl transition-all active:scale-[0.985]">
         <i class="fa-solid fa-undo text-xs"></i>
@@ -322,9 +317,27 @@
             </summary>
             <div class="pl-7 mt-2 space-y-1.5 text-sm">
               <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-gestionnaire"><span class="item-text">Créer nouvel employé</span></div>
-              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-gestionnaire"><span class="item-text">Envoyez un courriel à pjtremblay@Soteck.com une fois le profil créé</span></div>
+              <div class="flex items-center gap-3 sub-item"><input type="checkbox" class="modern-checkbox w-4 h-4 sub-gestionnaire"><span class="item-text">Envoyez un courriel à paie@soteck.com et à pjtremblay@Soteck.com une fois le profil créé</span></div>
             </div>
           </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: Imprimante -->
+    <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
+      <div class="section-header px-6 py-4 flex items-center gap-4">
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">05</div>
+        <h2 class="font-semibold text-xl tracking-tight">Imprimante</h2>
+      </div>
+      <div class="p-1.5">
+        <div class="checklist-item flex items-center gap-4 px-5 py-3 rounded-2xl">
+          <input type="checkbox" class="modern-checkbox">
+          <span class="item-text flex-1">Ajouter l'utilisateur dans carnet d'adresse de l'imprimante SOT-VIC-IMP-19</span>
+          <a href="#" target="_blank" class="nuclino-btn inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-2xl font-semibold no-print">
+            <span>Voir ajout carnet</span>
+            <i class="fa-solid fa-external-link-alt text-xs"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -332,7 +345,7 @@
     <!-- SECTION: Ordinateur -->
     <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
       <div class="section-header px-6 py-4 flex items-center gap-4">
-        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">05</div>
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">06</div>
         <h2 class="font-semibold text-xl tracking-tight">Ordinateur</h2>
       </div>
       <div class="p-1.5 space-y-0.5">
@@ -368,7 +381,7 @@
     <!-- SECTION: Téléphonie Telus -->
     <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
       <div class="section-header px-6 py-4 flex items-center gap-4">
-        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">06</div>
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">07</div>
         <h2 class="font-semibold text-xl tracking-tight">Téléphonie Telus - si demandé</h2>
       </div>
       <div class="p-1.5">
@@ -400,7 +413,7 @@
     <!-- SECTION: Téléphonie Cellulaire -->
     <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
       <div class="section-header px-6 py-4 flex items-center gap-4">
-        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">07</div>
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">08</div>
         <h2 class="font-semibold text-xl tracking-tight">Téléphonie Cellulaire - si demandé</h2>
       </div>
       <div class="p-1.5">
@@ -430,7 +443,7 @@
     <!-- SECTION: Accès bâtiments -->
     <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
       <div class="section-header px-6 py-4 flex items-center gap-4">
-        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">08</div>
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">09</div>
         <h2 class="font-semibold text-xl tracking-tight">Accès bâtiments</h2>
       </div>
       <div class="p-1.5">
@@ -461,7 +474,7 @@
     <!-- SECTION: Accueil Employé -->
     <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
       <div class="section-header px-6 py-4 flex items-center gap-4">
-        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">09</div>
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">10</div>
         <h2 class="font-semibold text-xl tracking-tight">Accueil Employé</h2>
       </div>
       <div class="p-1.5">
@@ -479,7 +492,7 @@
     <!-- SECTION: Bureau Flex ou Fixe ? -->
     <div class="onboarding-card bg-white rounded-3xl mb-6 overflow-hidden">
       <div class="section-header px-6 py-4 flex items-center gap-4">
-        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">10</div>
+        <div class="section-number w-8 h-8 flex items-center justify-center rounded-2xl text-sm shadow-sm">11</div>
         <h2 class="font-semibold text-xl tracking-tight">Bureau Flex ou Fixe ?</h2>
       </div>
       <div class="p-1.5">
